@@ -4,9 +4,9 @@ import cors from 'cors'
 import logger from 'morgan'
 
 // routes
-import streamController from './modules/stream/streamController'
-import contentController from './modules/content/contentController'
-import moviesController from './modules/movies/moviesController'
+import streamController from './modules/stream/StreamController'
+import contentController from './modules/content/ContentController'
+import moviesController from './modules/movies/MoviesController'
 
 // middleware
 const app = express();
