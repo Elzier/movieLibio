@@ -1,5 +1,5 @@
 import { parse } from 'qs'
-import { MAGNET_KEY, SPLIT_MAGNET_STRING } from './MoviesConst'
+import { MAGNET_KEY, SPLIT_MAGNET_STRING } from '../MoviesConst'
 
 export const extractMagnetFromQuery = (magnetLink: string) => {
     const parsedMagnetLink = parse(magnetLink)

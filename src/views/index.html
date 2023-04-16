@@ -35,6 +35,9 @@
                 message: 'Hello Vue!'
             }
         },
+        mounted() {
+            this.getMyMovies();
+        },
         methods: {
             async play(file) {
                 const res = await axios.get(`/stream/add/${file.magnet}`)
@@ -47,6 +50,11 @@
             async search() {
                 const res = await axios.get(`/movies/search?searchTerm=${this.searchTerm}`)
                 this.files = res.data
+            },
+            async getMyMovies() {
+                const res = await axios.get('/movies')
+                console.log(res.data)
+                this.files = res.data;
             }
         },
         computed: {
